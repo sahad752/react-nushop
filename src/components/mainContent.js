@@ -16,7 +16,7 @@ const MainContent = () => {
             <div className="card_header">
                 <h2>{item.product_name}</h2>
                 <p>{item.description}</p>
-                <p className="price">{item.price}<span>{item.currency}</span></p>
+                <p className="price">Rs. {item.price}</p>
                 <div className="btn">Purchase</div>
             </div>
         </div>

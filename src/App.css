@@ -130,7 +130,6 @@ nav .search .fa + .fa {
 
 .main_content .card {
   background-color: #2b3039;
-
   width: 30%;
   border-radius: 15px;
   -webkit-box-orient: vertical;
@@ -148,7 +147,9 @@ nav .search .fa + .fa {
 
 
 .main_content .card .card_img {
-  margin-top: -2vw;
+  /* margin-top: -2vw; */
+  height: 200px;
+  align-self: center;
 }
 
 .main_content .card .card_img img {
@@ -171,7 +172,7 @@ nav .search .fa + .fa {
 .main_content .card .card_header p {
   font-size: 14px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.3);
+  /* color: rgba(255, 255, 255, 0.3); */
   margin: 8px 16px;
 }
 
@@ -198,6 +199,20 @@ nav .search .fa + .fa {
   color: #fff;
 }
 
+.btn {
+  width: 130px;
+  height: 35px;
+  font-size: 14px;
+  border-radius: 35px;
+  background-color: #2d343e;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: background-color .3s ease;
+  transition: background-color .3s ease;
+  overflow: hidden;
+}
+
 
 .options {
   position: relative;
@@ -212,6 +227,47 @@ nav .search .fa + .fa {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+
+
+.available{
+  position: relative;
+  color: #fff;
+  border-radius: 35px;
+  background-color: #3c87f0;
+  align-self: flex-end;
+  margin-top: -1vw;
+  margin-right:-1vw ;
+
+
+}
+
+.available .text{
+  padding: 10px;
+  color: #fff;
+  border-radius: 35px;
+  background-color: #3c87f0;
+}
+
+.available .text2{
+  padding: 10px;
+  color: #fff;
+  border-radius: 35px;
+  background-color: #e94444;
+}
+
+
+.footer {
+  width: 100%;
+  padding: 30px 50px 20px 50px;
+  background-color: rgb(12, 42, 66);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: auto;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 12px;
 }
 
 .footer .social .fa {
