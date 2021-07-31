@@ -120,13 +120,8 @@ nav .search .fa + .fa {
       flex-wrap: wrap;
 }
 
-.main_content h3 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #2d343e;
-  font-size: 10.5vw;
-}
+
+
 
 .main_content .card {
   background-color: #2b3039;
@@ -142,6 +137,45 @@ nav .search .fa + .fa {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   margin-bottom: 50px;
+}
+
+ .card {
+  background-color: #2b3039;
+  width: 30%;
+  display: flex;
+  border-radius: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  align-items: center;
+}
+
+.card .card_img img {
+  width: 200px;
+}
+
+.card .box h2{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.card .box p{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  -webkit-box-orient: horizontal;
+
+  align-self: center;
 }
 
 
@@ -166,13 +200,12 @@ nav .search .fa + .fa {
 }
 
 .main_content .card .card_header h2 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .main_content .card .card_header p {
   font-size: 14px;
   text-align: center;
-  /* color: rgba(255, 255, 255, 0.3); */
   margin: 8px 16px;
 }
 
@@ -204,7 +237,7 @@ nav .search .fa + .fa {
   height: 35px;
   font-size: 14px;
   border-radius: 35px;
-  background-color: #2d343e;
+  background-color: #545a63;
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
   position: relative;
@@ -216,9 +249,9 @@ nav .search .fa + .fa {
 
 .options {
   position: relative;
-  width: 80%;
-  height: 20%;
-  margin: 10px auto;
+  width: 65%;
+  height: 10%;
+  margin: 20px auto;
   padding: 0px 0 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -237,7 +270,7 @@ nav .search .fa + .fa {
   border-radius: 35px;
   background-color: #3c87f0;
   align-self: flex-end;
-  margin-top: -1vw;
+  margin-top: -3vw;
   margin-right:-1vw ;
 
 
