@@ -13,6 +13,8 @@ export class DataProvider extends Component {
                 price: 350,
                 catogery:"Shoes",
                 available:1, 
+                count:1,
+
                 thumb: "./images/1.png"
             },
             {
@@ -20,6 +22,7 @@ export class DataProvider extends Component {
                 product_name: "Adidas ",
                 vendor: "ABC traders",
                 price: 250,
+                count:1,
                 catogery:"Shoes",
                 available:0, 
                 thumb: "./images/2.png"
@@ -31,6 +34,8 @@ export class DataProvider extends Component {
                 price: 350,
                 catogery:"Shoes",
                 available:1, 
+                count:1,
+
                 thumb: "./images/3.png"
             },
             {
@@ -40,7 +45,9 @@ export class DataProvider extends Component {
                 price: 350,
                 catogery:"slippers",
                 available:1, 
-                thumb: "./images/1.png"
+                count:1,
+
+                thumb: "./images/6.png"
             },
             {
                 id: 5,
@@ -49,7 +56,9 @@ export class DataProvider extends Component {
                 price: 250,
                 catogery:"slippers",
                 available:0, 
-                thumb: "./images/2.png"
+                count:1,
+
+                thumb: "./images/8.png"
             },
             {
                 id: 6,
@@ -57,8 +66,10 @@ export class DataProvider extends Component {
                 vendor: "XYZ traders",
                 price: 350,
                 available:1, 
+                count:1,
+
                 catogery:"slippers",
-                thumb: "./images/3.png"
+                thumb: "./images/9.png"
             },
             {
                 id: 7,
@@ -66,17 +77,21 @@ export class DataProvider extends Component {
                 vendor: "XYZ traders",
                 price: 350,
                 available:0, 
-                catogery:"Shoes",
-                thumb: "./images/1.png"
+                count:1,
+
+                catogery:"sandals",
+                thumb: "./images/7.png"
             },
             {
                 id: 8,
-                product_name: "Fila",
+                product_name: "Sparx",
                 vendor: "XYZ traders",
                 price: 250,
+                count:1,
+
                 available:1, 
                 catogery:"sandals",
-                thumb: "./images/2.png"
+                thumb: "./images/4.png"
             },
             {
                 id: 9,
@@ -84,8 +99,10 @@ export class DataProvider extends Component {
                 vendor: "XYZ traders",
                 price: 350,
                 available:1, 
-                catogery:"Sandals",
-                thumb: "./images/3.png"
+                count:1,
+
+                catogery:"sandals",
+                thumb: "./images/5.png"
             }
         ],
         cart:[],
@@ -101,13 +118,19 @@ export class DataProvider extends Component {
         // this.props.handlePeriodChange(selVal);
         console.log(selVal)
         const {product_card} = this.state;
+        if(selVal=="Catogery"){
+            this.setState({products2: product_card})
 
-        const data = product_card.filter(item =>{
-            return item.catogery == selVal
-        })
-        console.log("filtered data",data)
-        this.setState({products2: data}
-            )
+        }else{
+            const data = product_card.filter(item =>{
+                return item.catogery == selVal
+            })
+            console.log("filtered data",data)
+            this.setState({products2: data}
+                )
+        }
+
+       
     }
 
     addCart = (id) =>{

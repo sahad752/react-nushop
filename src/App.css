@@ -246,6 +246,19 @@ nav .search .fa + .fa {
   overflow: hidden;
 }
 
+.count{
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.amount{
+  color: white;
+}
+.amount span{
+  color: white;
+  padding: 10px;
+}
+
 
 .options {
   position: relative;

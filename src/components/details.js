@@ -48,9 +48,9 @@ export class Details extends Component {
                                     <h2>{item.product_name}</h2>
                                     <p className="price">Rs. {item.price}</p>
                                     <div className="amount">
-                                        <button className="count" onClick={() => reduction(item._id)}> - </button>
+                                        <button className="count" onClick={() => reduction(item.id)}> - </button>
                                         <span>{item.count}</span>
-                                        <button className="count" onClick={() => increase(item._id)}> + </button>
+                                        <button className="count" onClick={() => increase(item.id)}> + </button>
                                     </div>
                                     <div className="btn">Purchase</div>
                             </div>
