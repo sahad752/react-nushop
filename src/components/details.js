@@ -1,12 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component,useState } from 'react'
 import {DataContext} from './context'
+
+import Modal from "./Modal";
+
 
 
 export class Details extends Component {
     static contextType = DataContext;
     state = {
-        product11: []
+        product11: [],
+        modalOpen:false
     }
+
+    
 
     getProduct = () =>{
             const res = this.context.product_card;
@@ -21,6 +27,10 @@ export class Details extends Component {
         
     };
 
+    openmodal=(value)=>{
+            this.setState({modalOpen:value})
+    }
+
 
     componentDidMount(){
         this.getProduct();
@@ -29,16 +39,19 @@ export class Details extends Component {
 
 
     render() {
-        const {cart,increase,reduction,} = this.context;
-
+        const {cart,increase,reduction} = this.context;
+        const {product11,modalOpen } = this.state
+        // this.state = { modalOpen: false };
   
         return (
             <div>
                 <h2>
                     Product Detail
                 </h2>
+                {modalOpen && <Modal setOpenModal={this.openmodal} item={product11}/>}
+
                 {
-                    cart.map(item =>(
+                    product11.map(item =>(
                         <div className="card" >
                                 <div className="card_img">
                                     <img src={item.thumb}/>
@@ -52,12 +65,13 @@ export class Details extends Component {
                                         <span>{item.count}</span>
                                         <button className="count" onClick={() => increase(item.id)}> + </button>
                                     </div>
-                                    <div className="btn">Purchase</div>
+                                    <div onClick={()=>this.openmodal(true)} className="btn">Purchase</div>
                             </div>
                         </div>
                     )
                     )
                 }
+             
             </div>
         )
     }

@@ -14,6 +14,9 @@ import { Link } from "react-router-dom";
    render() {
      const {products2 ,handlePeriodChange,addCart} = this.context
 
+     const ConditionalLink = ({ children, to, item1,condition }) => (!!condition && to)
+     ? <Link onClick={()=>addCart(item1.id)}  style={{paddingLeft: 13, textDecoration: 'none'}} to={to}>{children}</Link>
+     : <>{children}</>;
 
     return (
         <div >
@@ -46,9 +49,9 @@ import { Link } from "react-router-dom";
                 <h2>{item.product_name}</h2>
                 <p>{item.description}</p>
                 <p className="price">Rs. {item.price}</p>
-                <Link onClick={()=>addCart(item.id)} to={`/details/${item.id}`}>
-                            <div className="btn">Purchase</div>
-               </Link>   
+                <ConditionalLink to={`/details/${item.id}`} item1={item} condition={item.available!=0} >
+                            <div className="btn">Buy Now</div>
+               </ConditionalLink>   
             </div>
         </div>
         )

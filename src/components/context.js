@@ -10,7 +10,7 @@ export class DataProvider extends Component {
                 id: 1,
                 product_name: "Nike Air Max",
                 vendor: "XYZ traders",
-                price: 350,
+                price: 2040,
                 catogery:"Shoes",
                 available:1, 
                 count:1,
@@ -21,7 +21,7 @@ export class DataProvider extends Component {
                 id: 2,
                 product_name: "Adidas ",
                 vendor: "ABC traders",
-                price: 250,
+                price: 1400,
                 count:1,
                 catogery:"Shoes",
                 available:0, 
@@ -31,7 +31,7 @@ export class DataProvider extends Component {
                 id: 3,
                 product_name: "Puma ",
                 vendor: "ABC traders",
-                price: 350,
+                price: 1899,
                 catogery:"Shoes",
                 available:1, 
                 count:1,
@@ -145,14 +145,15 @@ export class DataProvider extends Component {
             })
             this.setState({cart: [...cart,...data]})
         }else{
-            alert("The product has been added to cart.")
+            // alert("The product has been added to cart.")
         }
     };
 
     reduction = id =>{
         const { cart } = this.state;
+        console.log(cart);
         cart.forEach(item =>{
-            if(item._id === id){
+            if(item.id === id){
                 item.count === 1 ? item.count = 1 : item.count -=1;
             }
         })
@@ -167,6 +168,7 @@ export class DataProvider extends Component {
                 item.count += 1;
             }
         })
+        console.log(cart);
         this.setState({cart: cart});
         this.getTotal();
     };
