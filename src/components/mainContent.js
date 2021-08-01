@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
     }
 
    render() {
-     const {products2 ,handlePeriodChange} = this.context
+     const {products2 ,handlePeriodChange,addCart} = this.context
 
 
     return (
@@ -24,14 +24,14 @@ import { Link } from "react-router-dom";
             <option value="slippers">slippers</option>
 
 
-            <option selected value="Catogery">Catogery</option>
+            <option selected value="Catogery">All products</option>
            </select>
           </div>
             <div className="main_content">
             {(
             products2.map((item) =>
            
-           <div onClick={()=>console.log(item.thumb)} className="card" key={item.id}>
+           <div className="card" key={item.id}>
             <div className="available">
              { item.available==1?
                 <p className="text">In-Stock</p>: <p className="text2">Out-Stock</p>
@@ -46,7 +46,7 @@ import { Link } from "react-router-dom";
                 <h2>{item.product_name}</h2>
                 <p>{item.description}</p>
                 <p className="price">Rs. {item.price}</p>
-                <Link to={`/details/${item.id}`}>
+                <Link onClick={()=>addCart(item.id)} to={`/details/${item.id}`}>
                             <div className="btn">Purchase</div>
                </Link>   
             </div>

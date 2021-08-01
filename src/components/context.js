@@ -134,13 +134,14 @@ export class DataProvider extends Component {
     }
 
     addCart = (id) =>{
-        const {products, cart} = this.state;
+        const {product_card, cart} = this.state;
         const check = cart.every(item =>{
-            return item._id !== id
+            return item.id !== id
         })
+        
         if(check){
-            const data = products.filter(product =>{
-                return product._id === id
+            const data = product_card.filter(product =>{
+                return product.id ==id
             })
             this.setState({cart: [...cart,...data]})
         }else{
@@ -162,7 +163,7 @@ export class DataProvider extends Component {
     increase = id =>{
         const { cart } = this.state;
         cart.forEach(item =>{
-            if(item._id === id){
+            if(item.id === id){
                 item.count += 1;
             }
         })
@@ -194,20 +195,20 @@ export class DataProvider extends Component {
     };
     
     componentDidUpdate(){
-        localStorage.setItem('dataCart', JSON.stringify(this.state.cart))
-        localStorage.setItem('dataTotal', JSON.stringify(this.state.total))
+        // localStorage.setItem('dataCart', JSON.stringify(this.state.cart))
+        // localStorage.setItem('dataTotal', JSON.stringify(this.state.total))
     };
 
     componentDidMount(){
-        const dataCart = JSON.parse(localStorage.getItem('dataCart'));
+        // const dataCart = JSON.parse(localStorage.getItem('dataCart'));
 
-        if(dataCart !== null){
-            this.setState({cart: dataCart});
-        }
-        const dataTotal = JSON.parse(localStorage.getItem('dataTotal'));
-        if(dataTotal !== null){
-            this.setState({total: dataTotal});
-        }
+        // if(dataCart !== null){
+        //     this.setState({cart: dataCart});
+        // }
+        // const dataTotal = JSON.parse(localStorage.getItem('dataTotal'));
+        // if(dataTotal !== null){
+        //     this.setState({total: dataTotal});
+        // }
     }
    
 

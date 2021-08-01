@@ -21,6 +21,7 @@ export class Details extends Component {
         
     };
 
+
     componentDidMount(){
         this.getProduct();
     }
@@ -28,17 +29,16 @@ export class Details extends Component {
 
 
     render() {
-        const {cart,increase,reduction,removeProduct,total} = this.context;
+        const {cart,increase,reduction,} = this.context;
 
-        const {product11} = this.state;
-        const {addCart} = this.context;
+  
         return (
             <div>
                 <h2>
                     Product Detail
                 </h2>
                 {
-                    product11.map(item =>(
+                    cart.map(item =>(
                         <div className="card" >
                                 <div className="card_img">
                                     <img src={item.thumb}/>
