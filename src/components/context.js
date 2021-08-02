@@ -14,7 +14,6 @@ export class DataProvider extends Component {
                 catogery:"Shoes",
                 available:1, 
                 count:1,
-
                 thumb: "./images/1.png"
             },
             {
@@ -57,7 +56,6 @@ export class DataProvider extends Component {
                 catogery:"slippers",
                 available:0, 
                 count:1,
-
                 thumb: "./images/8.png"
             },
             {
@@ -67,7 +65,6 @@ export class DataProvider extends Component {
                 price: 350,
                 available:1, 
                 count:1,
-
                 catogery:"slippers",
                 thumb: "./images/9.png"
             },
