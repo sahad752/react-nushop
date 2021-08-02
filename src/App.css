@@ -298,6 +298,12 @@ nav .search .fa + .fa {
 }
 
 
+.DetailView{
+  display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
 
 .available{
   position: relative;

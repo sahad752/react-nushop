@@ -44,7 +44,7 @@ export class Details extends Component {
         // this.state = { modalOpen: false };
   
         return (
-            <div>
+            <div className="DetailView">
                 <h2 className="DetailHeader">
                     Product Detail
                 </h2>
