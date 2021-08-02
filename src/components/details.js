@@ -45,7 +45,7 @@ export class Details extends Component {
   
         return (
             <div>
-                <h2>
+                <h2 className="DetailHeader">
                     Product Detail
                 </h2>
                 {modalOpen && <Modal setOpenModal={this.openmodal} item={product11}/>}

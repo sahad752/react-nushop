@@ -43,7 +43,7 @@ function Modal({ setOpenModal,item}) {
           >
             Cancel
           </button>
-          <button> to Payment</button>
+          <button> proceed to pay</button>
         </div>
       </div>
     </div>

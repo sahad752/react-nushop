@@ -9,25 +9,30 @@
   }
   
   .modalContainer {
-    width: 500px;
-    height: 500px;
     border-radius: 12px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
-
     flex-direction: column;
     padding: 25px;
   }
   .modalBackground .modalContainer .items{
     display: flex;
-
     justify-content: center;
     align-items: center;
   }
   .modalcard .card_img img{
     align-self: center;
     width: 200px;
+    padding-bottom: 10px;
+  }
+
+  .modalcard .card_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+
   }
   
   .modalContainer .title {
@@ -44,7 +49,7 @@
   .titleCloseBtn button {
     background-color: transparent;
     border: none;
-    font-size: 25px;
+    font-size: 22px;
     cursor: pointer;
   }
   
